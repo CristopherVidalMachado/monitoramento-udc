@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_09_19_024028) do
 
   create_table "cidades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "nome"
+    t.string "nome", limit: 100
     t.bigint "estado_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -21,27 +21,27 @@ ActiveRecord::Schema.define(version: 2020_09_19_024028) do
   end
 
   create_table "estados", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "uf"
-    t.string "nome"
+    t.string "uf", limit: 2
+    t.string "nome", limit: 25
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "localidades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "nome"
+    t.string "nome", limit: 25
     t.bigint "cidade_id", null: false
-    t.decimal "lat", precision: 10
-    t.decimal "long", precision: 10
+    t.float "lat"
+    t.float "long"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cidade_id"], name: "index_localidades_on_cidade_id"
   end
 
   create_table "monitoramentos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.decimal "temperatura", precision: 10
-    t.decimal "ph", precision: 10
-    t.decimal "turbidez", precision: 10
-    t.decimal "condutividade", precision: 10
+    t.decimal "temperatura", precision: 10, scale: 2
+    t.decimal "ph", precision: 10, scale: 2
+    t.decimal "turbidez", precision: 10, scale: 2
+    t.decimal "condutividade", precision: 10, scale: 2
     t.bigint "localidade_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

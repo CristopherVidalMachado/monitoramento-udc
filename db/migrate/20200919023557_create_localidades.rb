@@ -1,11 +1,10 @@
 class CreateLocalidades < ActiveRecord::Migration[6.0]
   def change
     create_table :localidades do |t|
-      t.string :nome
+      t.string :nome, limit: 25
       t.references :cidade, null: false, foreign_key: true
-      t.decimal :lat
-      t.decimal :long
-
+      t.float :lat
+      t.float :long
       t.timestamps
     end
   end
