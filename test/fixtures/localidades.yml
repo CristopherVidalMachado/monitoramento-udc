@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  cidade: one
+  lat: 9.99
+  long: 9.99
+
+two:
+  nome: MyString
+  cidade: two
+  lat: 9.99
+  long: 9.99

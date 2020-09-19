@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  temperatura: 9.99
+  ph: 9.99
+  turbidez: 9.99
+  condutividade: 9.99
+  localidade: one
+
+two:
+  temperatura: 9.99
+  ph: 9.99
+  turbidez: 9.99
+  condutividade: 9.99
+  localidade: two

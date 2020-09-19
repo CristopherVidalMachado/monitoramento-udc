@@ -1,0 +1,42 @@
+<%= form_with(model: monitoramento, local: true) do |form| %>
+  <% if monitoramento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(monitoramento.errors.count, "error") %> prohibited this monitoramento from being saved:</h2>
+
+      <ul>
+        <% monitoramento.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :temperatura %>
+    <%= form.text_field :temperatura %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ph %>
+    <%= form.text_field :ph %>
+  </div>
+
+  <div class="field">
+    <%= form.label :turbidez %>
+    <%= form.text_field :turbidez %>
+  </div>
+
+  <div class="field">
+    <%= form.label :condutividade %>
+    <%= form.text_field :condutividade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :localidade_id %>
+    <%= form.text_field :localidade_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

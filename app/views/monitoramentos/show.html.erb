@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Temperatura:</strong>
+  <%= @monitoramento.temperatura %>
+</p>
+
+<p>
+  <strong>Ph:</strong>
+  <%= @monitoramento.ph %>
+</p>
+
+<p>
+  <strong>Turbidez:</strong>
+  <%= @monitoramento.turbidez %>
+</p>
+
+<p>
+  <strong>Condutividade:</strong>
+  <%= @monitoramento.condutividade %>
+</p>
+
+<p>
+  <strong>Localidade:</strong>
+  <%= @monitoramento.localidade_id %>
+</p>
+
+<%= link_to 'Edit', edit_monitoramento_path(@monitoramento) %> |
+<%= link_to 'Back', monitoramentos_path %>

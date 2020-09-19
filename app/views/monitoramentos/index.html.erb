@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Monitoramentos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Temperatura</th>
+      <th>Ph</th>
+      <th>Turbidez</th>
+      <th>Condutividade</th>
+      <th>Localidade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @monitoramentos.each do |monitoramento| %>
+      <tr>
+        <td><%= monitoramento.temperatura %></td>
+        <td><%= monitoramento.ph %></td>
+        <td><%= monitoramento.turbidez %></td>
+        <td><%= monitoramento.condutividade %></td>
+        <td><%= monitoramento.localidade_id %></td>
+        <td><%= link_to 'Show', monitoramento %></td>
+        <td><%= link_to 'Edit', edit_monitoramento_path(monitoramento) %></td>
+        <td><%= link_to 'Destroy', monitoramento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Monitoramento', new_monitoramento_path %>
