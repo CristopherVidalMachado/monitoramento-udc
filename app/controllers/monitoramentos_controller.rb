@@ -4,7 +4,7 @@ class MonitoramentosController < ApplicationController
   # GET /monitoramentos
   # GET /monitoramentos.json
   def index
-    @monitoramentos = Monitoramento.join(:localidade_id)
+    @monitoramentos = Monitoramento.join(:localidade)
   end
 
   # GET /monitoramentos/1
