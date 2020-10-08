@@ -28,7 +28,7 @@ class MonitoramentosController < ApplicationController
 
     respond_to do |format|
       if @monitoramento.save
-        format.html { redirect_to @monitoramento, notice: 'Monitoramento was successfully created.' }
+        format.html { redirect_to @monitoramento, notice: 'Monitoramento foi criado com sucesso.' }
         format.json { render :show, status: :created, location: @monitoramento }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class MonitoramentosController < ApplicationController
   def update
     respond_to do |format|
       if @monitoramento.update(monitoramento_params)
-        format.html { redirect_to @monitoramento, notice: 'Monitoramento was successfully updated.' }
+        format.html { redirect_to @monitoramento, notice: 'Monitoramento foi alterado com sucesso.' }
         format.json { render :show, status: :ok, location: @monitoramento }
       else
         format.html { render :edit }
