@@ -4,7 +4,7 @@ class LocalidadesController < ApplicationController
   # GET /localidades
   # GET /localidades.json
   def index
-    @localidades = Localidade.all
+    @localidades = Localidade.eager_load(:cidade).all
   end
 
   # GET /localidades/1

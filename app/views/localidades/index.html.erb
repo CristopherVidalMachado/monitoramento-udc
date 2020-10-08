@@ -17,7 +17,7 @@
     <% @localidades.each do |localidade| %>
       <tr>
         <td><%= localidade.nome %></td>
-        <td><%= localidade.cidade_id %></td>
+        <td><%= localidade.cidade.nome %></td>
         <td><%= localidade.lat %></td>
         <td><%= localidade.long %></td>
         <td><%= link_to 'Show', localidade %></td>
